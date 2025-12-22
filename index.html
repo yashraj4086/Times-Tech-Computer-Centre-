@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times-Tech | Professional IT Institute</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-blue: #000e21;
+            --accent-pink: #e91e63;
+            --gold: #ffcc00;
+            --text-light: #ffffff;
+            --card-bg: #001f3f;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--dark-blue);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Navigation with Logo */
+        nav {
+            background: rgba(0, 14, 33, 0.95);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+            box-sizing: border-box;
+            border-bottom: 2px solid var(--accent-pink);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 50px; /* Logo size adjustment */
+            width: auto;
+            border-radius: 5px;
+        }
+
+        .logo-text { font-size: 24px; font-weight: 800; color: var(--gold); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,14,33,0.8), rgba(0,14,33,0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; color: var(--gold); margin-bottom: 10px; text-transform: uppercase; }
+        .hero p { font-size: 1.4rem; margin-bottom: 30px; letter-spacing: 2px; }
+
+        /* Section Title */
+        .section-title { text-align: center; padding: 60px 0 20px; }
+        .section-title h2 { font-size: 2rem; border-bottom: 4px solid var(--accent-pink); padding-bottom: 10px; color: var(--gold); display: inline-block; }
+
+        /* Requirements Box */
+        .req-section { background: rgba(255, 204, 0, 0.05); padding: 40px 8%; }
+        .req-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .req-box { border: 1px dashed var(--gold); padding: 20px; border-radius: 10px; background: rgba(0,0,0,0.2); }
+
+        /* Courses */
+        .courses-grid { padding: 40px 8%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .course-card { background: var(--card-bg); padding: 30px; border-radius: 15px; border-left: 8px solid var(--accent-pink); transition: 0.3s; }
+        .course-card:hover { transform: translateY(-10px); }
+        .course-card h3 { color: var(--gold); margin-top: 0; }
+        .course-card ul { list-style: none; padding: 0; }
+        .course-card li { margin-bottom: 8px; font-size: 0.95rem; }
+        .course-card i { color: var(--accent-pink); margin-right: 10px; }
+
+        /* Form */
+        .form-section { background: #000b1a; padding: 60px 5%; }
+        .admission-form { max-width: 800px; margin: 0 auto; background: var(--card-bg); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: var(--gold); font-size: 0.85rem; font-weight: 600; }
+        input, select, textarea { width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #1a3a5a; background: #000e21; color: white; box-sizing: border-box; }
+
+        .btn { background: var(--accent-pink); color: white; padding: 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.1rem; transition: 0.3s; margin-top: 15px; text-decoration: none; display: block; text-align: center; }
+        .btn:hover { background: #c2185b; transform: scale(1.02); }
+
+        /* Footer */
+        footer { background: #000; padding: 50px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .footer-box h3 { color: var(--gold); margin-bottom: 20px; }
+        .footer-box p { margin-bottom: 10px; display: flex; align-items: center; }
+        .footer-box i { color: var(--accent-pink); margin-right: 15px; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .logo-text { font-size: 20px; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            
+            <img src="1.jpg" alt="Times Tech Logo" class="logo-img">
+            <div class="logo-text">TIMES-TECH COMPUTER CENTRE</div>
+        </div>
+        <div style="color: var(--gold); font-weight: bold;"><i class="fas fa-map-marker-alt"></i> KANDHKOT</div>
+    </nav>
+
+    <section class="hero">
+        <div data-aos="zoom-in">
+            <h1>ADMISSIONS OPEN</h1>
+            <p>INSTITUTE OF INFORMATION TECHNOLOGY</p>
+            <a href="#apply" class="btn" style="width: auto; padding: 15px 40px;">APPLY NOW</a>
+        </div>
+    </section>
+
+    <section class="req-section">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Admission Requirements</h2>
+        </div>
+        <div class="req-grid">
+            <div class="req-box" data-aos="fade-right">
+                <h3 style="color: var(--accent-pink);">DIT (1 Year)</h3>
+                <p><i class="fas fa-file-alt"></i> Intermediate One Marksheet</p>
+                <p><i class="fas fa-image"></i> 6 Passport Size Photos</p>
+                <p><i class="fas fa-id-card"></i> 1 CNIC or B-Form Copy</p>
+            </div>
+            <div class="req-box" data-aos="fade-left">
+                <h3 style="color: var(--accent-pink);">CIT (6 Months)</h3>
+                <p><i class="fas fa-user-graduate"></i> Minimum Qualification: Class 6th Pass</p>
+                <p><i class="fas fa-check-circle"></i> Basic Computer Interest</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-title" data-aos="fade-up">
+        <h2>OUR COURSES</h2>
+    </div>
+    <section class="courses-grid">
+        <div class="course-card" data-aos="flip-left">
+            <h3>DIT</h3>
+            <p style="color: var(--accent-pink); font-weight: bold; margin-bottom: 15px;">Diploma in Information Technology</p>
+            <ul>
+                <li><i class="fas fa-check"></i> MS Office</li>
+                <li><i class="fas fa-check"></i> Web Development (HTML - CSS - Javascript)</li>
+                <li><i class="fas fa-check"></i> Operating System (Windows 7 / 8 / 10 & 11 )</li>
+            </ul>
+        </div>
+
+        <div class="course-card" data-aos="flip-left" data-aos-delay="100">
+            <h3>CIT</h3>
+            <p style="color: var(--accent-pink); font-weight: bold; margin-bottom: 15px;">Certificate in Information Technology</p>
+            <ul>
+                <li><i class="fas fa-check"></i> MS Word, Excel, Access</li>
+                <li><i class="fas fa-check"></i> Powerpoint, Publisher</li>
+                <li><i class="fas fa-check"></i> Operating System</li>
+                <li><i class="fas fa-check"></i> Typing</li>
+            </ul>
+        </div>
+
+        <div class="course-card" data-aos="flip-left" data-aos-delay="200">
+            <h3>Graphic Designing</h3>
+            <p style="color: var(--accent-pink); font-weight: bold; margin-bottom: 15px;">Creative Design Professional</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Adobe Photoshop CC 2020</li>
+                <li><i class="fas fa-check"></i> Adobe Illustrator</li>
+                <li><i class="fas fa-check"></i> Adobe Premiere Pro</li>
+                <li><i class="fas fa-check"></i> CorelDraw</li>
+                <li><i class="fas fa-check"></i> Web Designing</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="form-section" id="apply">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Registration Form</h2>
+        </div>
+        <div class="admission-form" data-aos="zoom-in">
+            <form action="https://formsubmit.co/timestech4@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Student Name</label>
+                        <input type="text" name="Student_Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Father's Name</label>
+                        <input type="text" name="Father_Name" required>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select name="Gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Religion</label>
+                        <select name="Religion" required>
+                            <option value="Islam">Islam</option>
+                            <option value="Hinduism">Hinduism</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" name="DOB" required>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Current Education</label>
+                        <select name="Education" required>
+                            <option value="Class 6-9">Class 6th to 9th</option>
+                            <option value="Matric">Matric</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Graduation">Graduation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Course</label>
+                        <select name="Course" required>
+                            <option value="DIT">DIT</option>
+                            <option value="CIT">CIT</option>
+                            <option value="Graphics">Graphics Designing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Shift Time</label>
+                        <select name="Shift" required>
+                            <option value="11:00 AM - 12:30 PM">11:00 AM - 12:30 PM</option>
+                            <option value="12:30 PM - 02:00 PM">12:30 PM - 02:00 PM</option>
+                            <option value="02:00 PM - 03:30 PM">02:00 PM - 03:30 PM</option>
+                            <option value="03:30 PM - 05:00 PM">03:30 PM - 05:00 PM</option>
+                            <option value="05:00 PM - 06:30 PM">05:00 PM - 06:30 PM</option>
+                            <option value="07:00 PM - 08:30 PM">07:00 PM - 08:30 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>WhatsApp Number</label>
+                    <input type="tel" name="Phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Home Address</label>
+                    <textarea name="Address" rows="2" placeholder="Wadhey Shah Ghazi, Kandhkot" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">SUBMIT ADMISSION</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-box">
+            <img src="1.jpg" alt="Logo" style="height: 60px; margin-bottom: 15px; border-radius: 5px;">
+            <h3>Times-Tech Institute</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Wadhey Shah Ghazi, Near Old Video Market, Kandhkot</p>
+        </div>
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <p><i class="fab fa-whatsapp"></i> 0333-7364674</p>
+            <p><i class="fas fa-phone"></i> 0315-7309113</p>
+            <p><i class="fas fa-phone"></i> 0311-7911431</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
